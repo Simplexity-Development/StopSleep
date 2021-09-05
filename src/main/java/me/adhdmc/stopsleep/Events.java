@@ -1,3 +1,4 @@
+
 package me.adhdmc.stopsleep;
 
 import org.bukkit.ChatColor;
@@ -11,15 +12,11 @@ public class Events implements Listener {
     @EventHandler
     public void onBedEnter(PlayerBedEnterEvent event){
         Player player = event.getPlayer();
-        if (!player.hasPermission("stopsleep.bypass"))
-        {
-            if (!player.hasPermission("stopsleep.silent"))
-            {
-                player.sendMessage(ChatColor.RED+"Ain't no rest for the wicked");
-            }
-            event.setCancelled(true);
-        }
+        if (player.hasPermission("stopsleep.bypass"))
+            return;
+        event.setCancelled(true);
+        if (player.hasPermission("stopsleep.silent"))
+            return;
+        player.sendMessage(ChatColor.RED + "Ain't no rest for the wicked");
     }
-    public void setSpawn(){}
-
 }
