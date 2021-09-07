@@ -11,11 +11,9 @@ public class Events implements Listener {
     @EventHandler
     public void onBedEnter(PlayerBedEnterEvent event){
         Player player = event.getPlayer();
-        if (player.hasPermission("stopsleep.bypass"))
-            return;
+        if (player.hasPermission("stopsleep.bypass")) return;
         event.setCancelled(true);
-        if (player.hasPermission("stopsleep.silent"))
-            return;
-        player.sendMessage(ChatColor.translateAlternateColorCodes('&',Stopsleep.plugin.getConfig().getString("Message")));
+        if (player.hasPermission("stopsleep.silent")) return;
+        player.sendMessage(ChatColor.translateAlternateColorCodes('&',Stopsleep.plugin.getConfig().getString("Message", "&cAin't no rest for the wicked")));
     }
 }
