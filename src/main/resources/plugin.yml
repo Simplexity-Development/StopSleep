@@ -1,11 +1,18 @@
 name: Stopsleep
-version: '${project.version}'
+version: '1.1'
 main: me.adhdmc.stopsleep.Stopsleep
 api-version: 1.17
 authors: [ IllogicalSong ]
 permissions:
   stopsleep.bypass:
-    [bypass stopsleep]
+    description: bypass stopsleep
   stopsleep.silent:
-    [disable messages from stopsleep]
-description: It stops you from sleeping. Yep, that's it.
+    description: disable messages from stopsleep
+  stopsleep.reload:
+    description: reload plugin config
+description: "It stops you from sleeping. Yep, that's it."
+commands:
+  stopsleep:
+    description: Reloads the config for stopsleep
+    usage: /stopsleep reload
+    permission: stopsleep.reload
