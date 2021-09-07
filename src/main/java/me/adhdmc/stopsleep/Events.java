@@ -1,4 +1,3 @@
-
 package me.adhdmc.stopsleep;
 
 import org.bukkit.ChatColor;
@@ -17,6 +16,6 @@ public class Events implements Listener {
         event.setCancelled(true);
         if (player.hasPermission("stopsleep.silent"))
             return;
-        player.sendMessage(ChatColor.RED + "Ain't no rest for the wicked");
+        player.sendMessage(ChatColor.translateAlternateColorCodes('&',Stopsleep.plugin.getConfig().getString("2")));
     }
 }
