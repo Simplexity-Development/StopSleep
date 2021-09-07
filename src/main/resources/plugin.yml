@@ -1,7 +1,7 @@
 name: Stopsleep
-version: '${project.version}'
+version: ${project.version}
 main: me.adhdmc.stopsleep.Stopsleep
-api-version: 1.17
+api-version: 1.13
 authors: [ IllogicalSong ]
 permissions:
   stopsleep.bypass:
