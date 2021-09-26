@@ -11,6 +11,7 @@ public final class Stopsleep extends JavaPlugin {
         this.getCommand("stopsleep").setExecutor(new Commands());
         this.saveDefaultConfig();
         getConfig().addDefault("Message","&cAin't no rest for the wicked");
+        getConfig().addDefault("Explosions", false);
         plugin = this;
     }
 }
