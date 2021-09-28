@@ -7,10 +7,18 @@ public final class Stopsleep extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        getServer().getPluginManager().registerEvents(new Events(), this);
+        plugin = this;
+        if (plugin.getServer().getPluginManager().isPluginEnabled("CoreProtect")){
+            plugin.getServer().getPluginManager().registerEvents(new EventsDependCoreProtect(), this);
+        }else{
+                plugin.getServer().getPluginManager().registerEvents(new Events(), this);}
         this.getCommand("stopsleep").setExecutor(new Commands());
         this.saveDefaultConfig();
         getConfig().addDefault("Message","&cAin't no rest for the wicked");
-        plugin = this;
+        getConfig().addDefault("Break Bed", false);
+        getConfig().addDefault("Explosions", false);
+        getConfig().addDefault("Explosion Fire", false);
+        getConfig().addDefault("Explosion Block Damage", false);
+        getConfig().addDefault("Explosion Power", 1);
     }
 }

@@ -16,3 +16,4 @@ commands:
     description: Reloads the config for stopsleep
     usage: /stopsleep reload
     permission: stopsleep.reload
+softdepend: [CoreProtect]
