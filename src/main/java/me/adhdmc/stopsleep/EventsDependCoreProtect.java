@@ -2,7 +2,6 @@ package me.adhdmc.stopsleep;
 
 import net.coreprotect.CoreProtect;
 import net.coreprotect.CoreProtectAPI;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -44,17 +43,22 @@ public class EventsDependCoreProtect implements Listener {
         event.setCancelled(true);
         if (Stopsleep.plugin.getConfig().getBoolean("Break Bed", true)) {
             if (api.isEnabled()) {
-                api.logRemoval(player.getName(), event.getBed().getLocation(), event.getBed().getType(), null);
+                api.logRemoval(player.getName(),
+                        event.getBed().getLocation(),
+                        event.getBed().getType(), null);
             }
             event.getBed().breakNaturally();
         }
         if (Stopsleep.plugin.getConfig().getBoolean("Explosions", true)) {
             Location location = event.getBed().getLocation();
-            player.getWorld().createExplosion(location, Stopsleep.plugin.getConfig().getInt("Explosion Power", 1), Stopsleep.plugin.getConfig().getBoolean("Explosion Fire", false), Stopsleep.plugin.getConfig().getBoolean("Explosion Block Damage", false));
+            player.getWorld().createExplosion(location,
+                    Stopsleep.plugin.getConfig().getInt("Explosion Power", 1),
+                    Stopsleep.plugin.getConfig().getBoolean("Explosion Fire", false),
+                    Stopsleep.plugin.getConfig().getBoolean("Explosion Block Damage", false));
         }
         if (player.hasPermission("stopsleep.silent")) return;
         if (player.getWorld().getTime() > 12542) {
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', Stopsleep.plugin.getConfig().getString("Message", "&cAin't no rest for the wicked")));
+            player.sendMessage(MessageHandler.noSleep);
         }
     }
 }

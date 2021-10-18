@@ -1,6 +1,5 @@
 package me.adhdmc.stopsleep;
 
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -20,11 +19,14 @@ public class Events implements Listener {
         }
         if (Stopsleep.plugin.getConfig().getBoolean("Explosions", true)) {
             Location location = event.getBed().getLocation();
-            player.getWorld().createExplosion(location, Stopsleep.plugin.getConfig().getInt("Explosion Power", 1), Stopsleep.plugin.getConfig().getBoolean("Explosion Fire", false), Stopsleep.plugin.getConfig().getBoolean("Explosion Block Damage", false));
+            player.getWorld().createExplosion(location,
+                    Stopsleep.plugin.getConfig().getInt("Explosion Power", 1),
+                    Stopsleep.plugin.getConfig().getBoolean("Explosion Fire", false),
+                    Stopsleep.plugin.getConfig().getBoolean("Explosion Block Damage", false));
         }
         if (player.hasPermission("stopsleep.silent")) return;
         if (player.getWorld().getTime() > 12542) {
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', Stopsleep.plugin.getConfig().getString("Message", "&cAin't no rest for the wicked")));
+            player.sendMessage(MessageHandler.noSleep);
         }
     }
 }

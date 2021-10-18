@@ -1,13 +1,24 @@
 #StopSleep v 1.2.5
 #hi
 #Message when someone without the permission stopsleep.silent attempts to sleep:
+Prefix: "&#006a7d&l[&#26a5ffStopSleep&#006a7d&l] "
+
 Message: "&cAin't no rest for the wicked"
+
+No Command: "&cNo subcommand by that name"
+
+No Permission: "&cYou do not have permission to run this command"
+
 #Whether the bed should break on attempting to sleep/use the bed
 Break Bed: false
+
 #Whether beds should cause an explosion effect (Sounds, player/entity damage)
 Explosions: false
+
 #If the above is true, whether explosions should cause fire, or block damage
+#Explosion power of 1 is a normal explosion, tnt for reference.
 Explosion Fire: false
+
 Explosion Block Damage: false
-#1 is a normal explosion, tnt for reference.
+
 Explosion Power: 1
