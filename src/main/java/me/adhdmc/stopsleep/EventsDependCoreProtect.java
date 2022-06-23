@@ -39,7 +39,9 @@ public class EventsDependCoreProtect implements Listener {
     @EventHandler
     public void onBedInteract(PlayerBedEnterEvent event) {
         Player player = event.getPlayer();
-        if (player.hasPermission("stopsleep.bypass")) return;
+        if (player.hasPermission("stopsleep.bypass")) {
+            return;
+        }
         event.setCancelled(true);
         if (Stopsleep.plugin.getConfig().getBoolean("Break Bed", true)) {
             if (api.isEnabled()) {
@@ -56,7 +58,9 @@ public class EventsDependCoreProtect implements Listener {
                     Stopsleep.plugin.getConfig().getBoolean("Explosion Fire", false),
                     Stopsleep.plugin.getConfig().getBoolean("Explosion Block Damage", false));
         }
-        if (player.hasPermission("stopsleep.silent")) return;
+        if (player.hasPermission("stopsleep.silent")) {
+            return;
+        }
         if (player.getWorld().getTime() > 12542) {
             player.sendMessage(MessageHandler.noSleep);
         }

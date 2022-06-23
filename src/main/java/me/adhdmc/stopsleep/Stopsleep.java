@@ -23,5 +23,6 @@ public final class Stopsleep extends JavaPlugin {
         getConfig().addDefault("Explosion Fire", false);
         getConfig().addDefault("Explosion Block Damage", false);
         getConfig().addDefault("Explosion Power", 1);
+        MessageHandler.loadConfigMsgs();
     }
 }
