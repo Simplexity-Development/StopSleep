@@ -3,7 +3,7 @@
 [![GitHub Downloads](https://img.shields.io/github/downloads/ADHDMC/StopSleep/total?color=00AAAA&label=GitHub%20Downloads&logo=github&style=flat-square)](https://github.com/ADHDMC/StopSleep/releases)
 
 [![Discord](https://img.shields.io/badge/Discord-join-7289DA?logo=discord&logoColor=7289DA&style=flat-square)](https://discord.gg/qe3YQrbegA)
-[![Ko-Fi Support Link](https://img.shields.io/badge/Ko--fi-donate-FF5E5B?logo=ko-fi&style=flat-square)](https://ko-fi.com/illogicalrhythmic)
+[![Ko-Fi Support Link](https://img.shields.io/badge/ADHDMC_Development-Ko--fi-FF5E5B?logo=ko-fi&style=flat-square)](https://ko-fi.com/adhdmc_dev)
 
 You hate beds? Wish the night was never ending? Want players to deal with phantoms and stop avoiding their problems? Well here you go- Stop Sleep is here to do just that, stop sleeping
 
